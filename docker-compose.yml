@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    image: postgres:15
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: puul_user
+      POSTGRES_PASSWORD: puul_password
+      POSTGRES_DB: puul_challenge
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
